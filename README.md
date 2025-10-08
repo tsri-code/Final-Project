@@ -4,7 +4,7 @@ A fitness application for searching exercises, building custom workout routines,
 
 **Live Demo:** [https://tsri-code.github.io/]
 
-**Pull Request:** [Link to PR]
+**Pull Request:** [https://github.com/tsri-code/Final-Project/pull/1]
 
 ### 🔑 Demo Account
 
