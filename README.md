@@ -139,12 +139,6 @@ src/
    http://localhost:5173
    ```
 
-### Alternative: Use the startup script
-
-```bash
-./start-dev.sh
-```
-
 ---
 
 ## Available Commands
