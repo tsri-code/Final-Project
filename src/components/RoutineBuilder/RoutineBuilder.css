@@ -1,0 +1,134 @@
+/* RoutineBuilder.css - Routine builder component styles */
+
+.routine-builder {
+  background-color: #1a1a1a;
+  border: 3px solid #1e3a8a;
+  box-shadow: 0 0 20px rgba(30, 58, 138, 0.5);
+  border-radius: 12px;
+  padding: 32px;
+  margin-top: 40px;
+}
+
+.routine-builder__header {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.routine-builder__title-field {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.routine-builder__title-input {
+  width: 100%;
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #0a0a0a;
+  border: 2px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 14px 18px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.routine-builder__title-input:focus {
+  outline: none;
+  border-color: #1e3a8a;
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.2);
+}
+
+.routine-builder__title-input_error {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+}
+
+.routine-builder__title-input_error:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.3);
+}
+
+.routine-builder__title-input::placeholder {
+  color: #666;
+}
+
+.routine-builder__error {
+  margin: 0;
+  padding: 8px 12px;
+  background-color: rgba(220, 38, 38, 0.1);
+  border-left: 3px solid #dc2626;
+  color: #fca5a5;
+  font-size: 14px;
+  border-radius: 4px;
+  animation: slideIn 0.2s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.routine-builder__actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* Exercises Container */
+.routine-builder__exercises {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .routine-builder {
+    padding: 20px;
+    margin: 20px 12px;
+  }
+
+  .routine-builder__header {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 24px;
+  }
+
+  .routine-builder__title-input {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .routine-builder__actions {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .routine-builder {
+    padding: 16px;
+    margin: 16px 8px;
+  }
+
+  .routine-builder__title-input {
+    font-size: 17px;
+    padding: 12px 16px;
+  }
+
+  .routine-builder__actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

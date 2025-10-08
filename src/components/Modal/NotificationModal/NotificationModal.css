@@ -1,0 +1,39 @@
+/* notification modal - unique styles only */
+@import url("../Modal.css");
+
+.notification-modal__content {
+  max-width: 400px;
+  border: 3px solid #1e40af;
+  box-shadow: 0 0 20px rgba(30, 64, 175, 0.5);
+}
+
+/* variant - error */
+.notification-modal__content_error {
+  border-color: #dc2626;
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+}
+
+/* variant - info */
+.notification-modal__content_info {
+  border-color: #06b6d4;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+}
+
+/* icon variants */
+.notification-modal__icon_success {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+  border-color: #22c55e;
+}
+
+.notification-modal__icon_error {
+  background-color: rgba(220, 38, 38, 0.2);
+  color: #dc2626;
+  border-color: #dc2626;
+}
+
+.notification-modal__icon_info {
+  background-color: rgba(6, 182, 212, 0.2);
+  color: #06b6d4;
+  border-color: #06b6d4;
+}

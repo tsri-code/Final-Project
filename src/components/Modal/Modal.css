@@ -1,0 +1,111 @@
+/* shared modal styles - base classes for all modals */
+
+/* modal overlay - common to all modals */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+/* modal content container - base styles */
+.modal-content {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+/* close button - common to all modals */
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #d1d5db;
+  font-size: 32px;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: #ffffff;
+}
+
+/* modal title - common styling */
+.modal-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 16px;
+}
+
+/* modal message - common styling */
+.modal-message {
+  font-size: 16px;
+  color: #d1d5db;
+  margin: 0 0 32px;
+  line-height: 1.5;
+}
+
+/* modal actions - button container */
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* modal icon - common base */
+.modal-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 36px;
+  font-weight: bold;
+  border: 3px solid;
+}
+
+/* responsive - common breakpoints */
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 16px;
+  }
+
+  .modal-content {
+    padding: 32px 24px;
+  }
+
+  .modal-title {
+    font-size: 20px;
+  }
+
+  .modal-message {
+    font-size: 14px;
+  }
+
+  .modal-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 32px;
+  }
+}

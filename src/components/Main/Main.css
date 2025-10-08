@@ -1,0 +1,234 @@
+/* Main.css - Main component styles */
+
+.main {
+  flex: 1;
+  padding: 32px 16px;
+  min-height: calc(100vh - 200px);
+  background-color: #0a0a0a;
+}
+
+.main__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.main__welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.main__welcome-title {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+  margin: 0 0 24px 0;
+}
+
+.main__welcome-subtitle {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #a0a0a0;
+  margin: 0;
+  max-width: 700px;
+}
+
+.main__content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px;
+  align-items: start;
+}
+
+.main__features {
+  width: 100%;
+}
+
+/* routine card styles */
+.routine-card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  border: 3px solid #1e3a8a;
+  box-shadow: 0 0 20px rgba(30, 58, 138, 0.5);
+  overflow: hidden;
+  width: 100%;
+}
+
+.routine-card__header {
+  padding: 24px 28px;
+  border-bottom: 3px solid #1e3a8a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.routine-card__title {
+  margin: 0;
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.routine-card__date {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 15px;
+  color: #707070;
+}
+
+.routine-card__content {
+  padding: 20px 28px;
+  display: grid;
+  gap: 14px;
+}
+
+.exercise-item {
+  background-color: #252525;
+  border-radius: 8px;
+  padding: 20px;
+  border: 3px solid #1e3a8a;
+  box-shadow: 0 0 15px rgba(30, 58, 138, 0.4);
+}
+
+.exercise-item__name {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+}
+
+.exercise-item__description {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 15px;
+  color: #909090;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.exercise-item__sets {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 15px;
+  color: #909090;
+  line-height: 1.4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 10px 0 0 0;
+}
+
+.exercise-item__set {
+  padding-right: 12px;
+  border-right: 3px solid #1e3a8a;
+}
+
+.exercise-item__set:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main {
+    padding: 24px 16px;
+  }
+
+  .main__container {
+    gap: 24px;
+  }
+
+  .main__welcome {
+    padding: 40px 20px;
+  }
+
+  .main__welcome-title {
+    font-size: 36px;
+  }
+
+  .main__welcome-subtitle {
+    font-size: 18px;
+  }
+
+  .main__content-grid {
+    grid-template-columns: 1fr;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .card__header {
+    padding: 20px;
+  }
+
+  .card__content {
+    padding: 20px;
+  }
+
+  .card__title {
+    font-size: 22px;
+  }
+
+  .card__description {
+    font-size: 15px;
+  }
+
+  .card__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features-list__item {
+    padding: 16px 0;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: 16px 12px;
+  }
+
+  .main__welcome {
+    padding: 32px 16px;
+  }
+
+  .main__welcome-title {
+    font-size: 32px;
+  }
+
+  .main__welcome-subtitle {
+    font-size: 16px;
+  }
+
+  .main__content-grid {
+    grid-template-columns: 1fr;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .card {
+    border-radius: 6px;
+  }
+
+  .card__header,
+  .card__content {
+    padding: 16px;
+  }
+
+  .card__title {
+    font-size: 20px;
+  }
+}

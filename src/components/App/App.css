@@ -1,0 +1,10 @@
+/* App.css - Main application component styles */
+
+/* App Block */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #0a0a0a;
+  font-family: inherit;
+}
