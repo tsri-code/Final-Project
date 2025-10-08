@@ -1,0 +1,236 @@
+/* Navigation.css - Navigation component styles */
+
+.navigation {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.navigation__group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.navigation__links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navigation__link {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.navigation__link:hover {
+  opacity: 0.7;
+}
+
+/* Dropdown styles */
+.navigation__dropdown {
+  position: relative;
+}
+
+.navigation__dropdown-toggle {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navigation__dropdown-toggle:hover {
+  opacity: 0.7;
+}
+
+.navigation__dropdown-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.navigation__dropdown-toggle_active .navigation__dropdown-arrow {
+  transform: translateY(3px);
+}
+
+.navigation__dropdown-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  background-color: #1a1a1a;
+  border: 3px solid #1e3a8a;
+  box-shadow: 0 0 20px rgba(30, 58, 138, 0.5);
+  border-radius: 8px;
+  padding: 12px 0;
+  min-width: 180px;
+  z-index: 100;
+}
+
+.navigation__dropdown-link {
+  display: block;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  text-decoration: none;
+  padding: 12px 20px;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.navigation__dropdown-link:hover {
+  background-color: rgba(30, 58, 138, 0.2);
+  opacity: 0.9;
+}
+
+.navigation__user-info {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__user-name {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.navigation__mobile-links {
+  display: none;
+}
+
+.navigation__close {
+  display: none;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation__close:hover {
+  opacity: 0.7;
+}
+
+.navigation__close:active {
+  opacity: 0.5;
+}
+
+.navigation__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.navigation__loading {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #a0a0a0;
+}
+
+/* mobile styles */
+@media (max-width: 768px) {
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0a0a0a;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    transform: translateX(-100%);
+    z-index: 999;
+  }
+
+  .navigation_opened {
+    transform: translateX(0);
+  }
+
+  .navigation__close {
+    display: flex;
+  }
+
+  .navigation__group {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .navigation__links {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .navigation__link {
+    font-size: 20px;
+    padding: 10px 0;
+    font-weight: 500;
+  }
+
+  .navigation__dropdown_desktop {
+    display: none;
+  }
+
+  .navigation__mobile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .navigation__mobile-links .navigation__link {
+    font-size: 20px;
+    padding: 12px 0;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .navigation__user-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #00bcd4;
+  }
+
+  .navigation__actions {
+    flex-direction: column;
+    gap: 12px;
+    margin-left: 0;
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .navigation__actions .button {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}

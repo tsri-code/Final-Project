@@ -1,0 +1,688 @@
+/* SavedWorkouts page styles */
+.saved-workouts-page {
+  flex: 1;
+  padding: 32px 16px;
+  min-height: calc(100vh - 200px);
+  background-color: #0a0a0a;
+}
+
+.saved-workouts-page__container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.saved-workouts-page__search,
+.saved-workouts-page__saved {
+  margin-bottom: 60px;
+}
+
+.saved-workouts-page__header {
+  margin-bottom: 32px;
+  text-align: center;
+  padding: 20px 20px 0;
+}
+
+.saved-workouts-page__title {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+}
+
+.saved-workouts-page__description {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #a0a0a0;
+  margin: 0;
+}
+
+/* Search Form */
+.search-form {
+  background-color: #1a1a1a;
+  border: 3px solid #1e3a8a;
+  box-shadow: 0 0 20px rgba(30, 58, 138, 0.5);
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 32px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.search-form__group {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.search-form__label {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.search-form__select,
+.search-form__input {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #0a0a0a;
+  border: 2px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 12px 16px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-form__select:focus,
+.search-form__input:focus {
+  outline: none;
+  border-color: #1e3a8a;
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.2);
+}
+
+.search-form__select option {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.search-form__input::placeholder {
+  color: #666;
+}
+
+/* Loading, Error, Empty States */
+.saved-workouts-page__loading {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.saved-workouts-page__error {
+  background-color: rgba(255, 77, 0, 0.1);
+  border: 3px solid #ff4d00;
+  box-shadow: 0 0 15px rgba(255, 77, 0, 0.3);
+  border-radius: 8px;
+  padding: 24px;
+  margin: 20px 0;
+}
+
+.saved-workouts-page__error-text {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ff4d00;
+  text-align: center;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.saved-workouts-page__empty {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.saved-workouts-page__empty-text {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #a0a0a0;
+  margin: 0;
+}
+
+/* Results */
+.saved-workouts-page__results {
+  margin-top: 32px;
+}
+
+.saved-workouts-page__results-title {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 24px 0;
+}
+
+/* Exercise Carousel */
+.exercise-carousel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.exercise-carousel__track {
+  flex: 1;
+  min-width: 0;
+}
+
+.exercise-carousel__nav {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background-color: #1a1a1a;
+  border: 3px solid #1e3a8a;
+  box-shadow: 0 0 15px rgba(30, 58, 138, 0.4);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+}
+
+.exercise-carousel__nav:hover {
+  background-color: #1e3a8a;
+  box-shadow: 0 0 25px rgba(30, 58, 138, 0.6);
+  transform: scale(1.05);
+}
+
+.exercise-carousel__nav:active {
+  transform: scale(0.95);
+}
+
+/* Carousel Indicators */
+.exercise-carousel__indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.exercise-carousel__indicator {
+  width: 12px;
+  height: 12px;
+  background-color: #2a2a2a;
+  border: 2px solid #1e3a8a;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.exercise-carousel__indicator:hover {
+  background-color: #1e3a8a;
+  transform: scale(1.2);
+}
+
+.exercise-carousel__indicator_active {
+  background-color: #00bcd4;
+  border-color: #00bcd4;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+}
+
+/* Exercise Card */
+.exercise-card {
+  background-color: #1a1a1a;
+  border: 3px solid #1e3a8a;
+  box-shadow: 0 0 20px rgba(30, 58, 138, 0.5);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exercise-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(30, 58, 138, 0.7);
+}
+
+.exercise-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #2a2a2a;
+}
+
+.exercise-card__name {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.exercise-card__info-btn {
+  background: none;
+  border: none;
+  color: #00bcd4;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.exercise-card__info-btn:hover {
+  color: #06b6d4;
+  transform: scale(1.1);
+}
+
+.exercise-card__difficulty {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0a0a0a;
+  background-color: #00bcd4;
+  padding: 4px 12px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.exercise-card__details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.exercise-card__detail {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #a0a0a0;
+  margin: 0;
+}
+
+.exercise-card__detail strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.exercise-card__instructions {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #a0a0a0;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+/* Routine Card Styles - Matching Example Workout */
+.saved-workouts-page .routine-card {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  border: 3px solid #1e3a8a;
+  box-shadow: 0 0 20px rgba(30, 58, 138, 0.5);
+  overflow: hidden;
+  width: 100%;
+}
+
+.saved-workouts-page .routine-card__header {
+  padding: 24px 28px;
+  border-bottom: 3px solid #1e3a8a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.saved-workouts-page .routine-card__title {
+  margin: 0;
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.saved-workouts-page .routine-card__date {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 15px;
+  color: #707070;
+}
+
+.saved-workouts-page .routine-card__content {
+  padding: 20px 28px;
+  display: grid;
+  gap: 14px;
+}
+
+.saved-workouts-page .exercise-item {
+  background-color: #252525;
+  border-radius: 8px;
+  padding: 20px;
+  border: 3px solid #1e3a8a;
+  box-shadow: 0 0 15px rgba(30, 58, 138, 0.4);
+}
+
+.saved-workouts-page .exercise-item__name {
+  margin: 0 0 10px 0;
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.saved-workouts-page .exercise-item__sets {
+  margin: 0;
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 15px;
+  color: #909090;
+  line-height: 1.4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.saved-workouts-page .exercise-item__set {
+  padding-right: 12px;
+  border-right: 3px solid #1e3a8a;
+}
+
+.saved-workouts-page .exercise-item__set:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.saved-workouts-page .routine-card__empty {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 15px;
+  color: #707070;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.saved-workouts-page .routine-card__footer {
+  padding: 20px 28px;
+  border-top: 3px solid #1e3a8a;
+  display: flex;
+  gap: 12px;
+  background-color: #0f0f0f;
+}
+
+.saved-workouts-page .routine-card__footer .button {
+  flex: 1;
+}
+
+/* Saved Workouts Grid */
+.saved-workouts-page__saved .exercise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .saved-workouts-page__saved .exercise-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .saved-workouts-page {
+    padding: 20px 12px;
+  }
+
+  .saved-workouts-page__header {
+    padding: 16px 8px 0;
+  }
+
+  .saved-workouts-page__title {
+    font-size: 28px;
+  }
+
+  .saved-workouts-page__description {
+    font-size: 14px;
+  }
+
+  .search-form {
+    padding: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .search-form__group {
+    min-width: 100%;
+  }
+
+  .search-form__label {
+    font-size: 12px;
+  }
+
+  .search-form__select,
+  .search-form__input {
+    font-size: 14px;
+    padding: 10px 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .saved-workouts-page__saved .exercise-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .exercise-card {
+    padding: 18px;
+  }
+
+  .exercise-card__name {
+    font-size: 18px;
+    gap: 8px;
+  }
+
+  .exercise-card__info-btn {
+    font-size: 18px;
+  }
+
+  .exercise-card__difficulty {
+    font-size: 11px;
+    padding: 3px 10px;
+  }
+
+  .exercise-card__detail {
+    font-size: 13px;
+  }
+
+  .exercise-card__instructions {
+    display: none;
+  }
+
+  .saved-workouts-page .routine-card__header {
+    padding: 18px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .saved-workouts-page .routine-card__title {
+    font-size: 22px;
+  }
+
+  .saved-workouts-page .routine-card__date {
+    font-size: 12px;
+  }
+
+  .saved-workouts-page .routine-card__content {
+    padding: 14px 20px;
+    gap: 10px;
+  }
+
+  .saved-workouts-page .exercise-item {
+    padding: 14px;
+  }
+
+  .saved-workouts-page .exercise-item__name {
+    font-size: 15px;
+  }
+
+  .saved-workouts-page .exercise-item__sets {
+    font-size: 13px;
+    gap: 10px;
+    flex-wrap: wrap;
+    word-break: break-word;
+    max-width: 100%;
+  }
+
+  .saved-workouts-page .exercise-item__set {
+    padding-right: 10px;
+    border-right-width: 2px;
+  }
+
+  .saved-workouts-page .routine-card__footer {
+    padding: 14px 20px;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .saved-workouts-page .routine-card__footer .button {
+    width: 100%;
+  }
+
+  .exercise-carousel {
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .exercise-carousel__nav {
+    width: 48px;
+    height: 48px;
+    font-size: 30px;
+    flex-shrink: 0;
+  }
+
+  .exercise-carousel__track {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .exercise-carousel__indicators {
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .saved-workouts-page {
+    padding: 16px 12px;
+  }
+
+  .saved-workouts-page__header {
+    padding: 12px 4px 0;
+  }
+
+  .saved-workouts-page__title {
+    font-size: 24px;
+  }
+
+  .saved-workouts-page__description {
+    font-size: 13px;
+  }
+
+  .search-form {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .search-form__label {
+    font-size: 11px;
+  }
+
+  .search-form__select,
+  .search-form__input {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .exercise-card {
+    padding: 16px;
+  }
+
+  .exercise-card__name {
+    font-size: 16px;
+    gap: 6px;
+  }
+
+  .exercise-card__info-btn {
+    font-size: 22px;
+  }
+
+  .exercise-card__header {
+    flex-wrap: wrap;
+  }
+
+  .exercise-card__difficulty {
+    font-size: 10px;
+    padding: 2px 8px;
+  }
+
+  .exercise-card__detail {
+    font-size: 12px;
+  }
+
+  .exercise-carousel {
+    flex-direction: row;
+  }
+
+  .exercise-carousel__nav {
+    width: 44px;
+    height: 44px;
+    font-size: 28px;
+  }
+
+  .saved-workouts-page .routine-card__header {
+    padding: 14px 16px;
+  }
+
+  .saved-workouts-page .routine-card__title {
+    font-size: 20px;
+  }
+
+  .saved-workouts-page .routine-card__date {
+    font-size: 11px;
+  }
+
+  .saved-workouts-page .routine-card__content {
+    padding: 10px 16px;
+  }
+
+  .saved-workouts-page .exercise-item {
+    padding: 12px;
+  }
+
+  .saved-workouts-page .exercise-item__name {
+    font-size: 14px;
+  }
+
+  .saved-workouts-page .exercise-item__sets {
+    font-size: 12px;
+    gap: 8px;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .saved-workouts-page .exercise-item__set {
+    padding-right: 8px;
+  }
+
+  .saved-workouts-page .routine-card__footer {
+    padding: 12px 16px;
+  }
+}

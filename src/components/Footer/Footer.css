@@ -1,0 +1,87 @@
+/* Footer.css - Footer component styles */
+
+.footer {
+  background-color: #0a0a0a;
+  border-top: 3px solid #1e3a8a;
+  box-shadow: 0 0 20px rgba(30, 58, 138, 0.5);
+  padding: 24px 0;
+  margin-top: auto;
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer__copyright {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 16px;
+  color: #a0a0a0;
+  margin: 0;
+}
+
+.footer__nav {
+  flex-shrink: 0;
+}
+
+.footer__nav-list {
+  display: flex;
+  gap: 24px;
+}
+
+.footer__nav-item {
+  display: flex;
+}
+
+.footer__nav-link {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 16px;
+  color: #a0a0a0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__nav-link:hover,
+.footer__nav-link:focus {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer__nav-link:focus {
+  outline: 2px solid #1e3a8a;
+  outline-offset: 2px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .footer {
+    padding: 16px 0;
+  }
+
+  .footer__content {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .footer__nav-list {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 16px;
+  }
+}

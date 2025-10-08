@@ -1,0 +1,27 @@
+/* confirmation modal - unique styles only */
+@import url("../Modal.css");
+
+.confirmation-modal__content {
+  max-width: 450px;
+  border: 3px solid #dc2626;
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+}
+
+/* variant - warning */
+.confirmation-modal__content_warning {
+  border-color: #f59e0b;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+}
+
+/* icon variants */
+.confirmation-modal__icon {
+  background-color: rgba(220, 38, 38, 0.2);
+  color: #dc2626;
+  border-color: #dc2626;
+}
+
+.confirmation-modal__content_warning .confirmation-modal__icon {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+  border-color: #f59e0b;
+}

@@ -1,0 +1,148 @@
+/* Preloader.css - Loading animation component styles */
+
+.preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.preloader_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(10, 10, 10, 0.95);
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+}
+
+.preloader__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.preloader__spinner {
+  position: relative;
+}
+
+/* Size variants */
+.preloader_size_small .preloader__spinner {
+  width: 24px;
+  height: 24px;
+}
+
+.preloader_size_medium .preloader__spinner {
+  width: 32px;
+  height: 32px;
+}
+
+.preloader_size_large .preloader__spinner {
+  width: 48px;
+  height: 48px;
+}
+
+.preloader__spinner-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  animation: preloader-rotate 1.2s linear infinite;
+}
+
+.preloader__spinner-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-top: 2px solid #3b82f6;
+  border-radius: 50%;
+  animation: preloader-fade 1.2s ease-in-out infinite;
+}
+
+.preloader__spinner-circle:nth-child(1) {
+  animation-delay: -0.4s;
+}
+
+.preloader__spinner-circle:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.preloader__spinner-circle:nth-child(3) {
+  animation-delay: 0s;
+}
+
+.preloader__text {
+  font-size: 14px;
+  color: #9ca3af;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Size-specific text styles */
+.preloader_size_small .preloader__text {
+  font-size: 12px;
+}
+
+.preloader_size_medium .preloader__text {
+  font-size: 14px;
+}
+
+.preloader_size_large .preloader__text {
+  font-size: 16px;
+}
+
+/* Animations */
+@keyframes preloader-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-fade {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .preloader__spinner-circle {
+    border-top-color: #60a5fa;
+  }
+
+  .preloader__text {
+    color: #ffffff;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .preloader__spinner-inner {
+    animation: none;
+  }
+
+  .preloader__spinner-circle {
+    animation: none;
+    border-top-color: #3b82f6;
+  }
+
+  .preloader__spinner-circle:nth-child(2),
+  .preloader__spinner-circle:nth-child(3) {
+    display: none;
+  }
+}
