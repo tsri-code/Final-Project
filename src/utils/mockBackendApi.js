@@ -13,7 +13,7 @@ let mockUsers = getFromStorage(STORAGE_KEYS.USERS) || [
     id: 1,
     name: "Demo User",
     email: "demo@example.com",
-    password: "password123",
+    password: "Password123!",
   },
 ];
 

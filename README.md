@@ -11,7 +11,7 @@ A fitness application for searching exercises, building custom workout routines,
 To explore the app without creating an account, use these credentials:
 
 - **Email:** `demo@example.com`
-- **Password:** `password123`
+- **Password:** `Password123!`
 
 Alternatively, you can register a new account using the "Sign Up" button. All data is stored locally in your browser.
 
