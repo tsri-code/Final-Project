@@ -152,7 +152,7 @@ function AppContent() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Final-Project">
       <AppContent />
     </BrowserRouter>
   );
