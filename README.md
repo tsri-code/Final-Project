@@ -2,7 +2,7 @@
 
 A fitness application for searching exercises, building custom workout routines, and scheduling workouts on a calendar. Built as the final project for TripleTen Software Engineering Bootcamp.
 
-**Live Demo:** [https://tsri-code.github.io/]
+**Live Demo:** [https://tsri-code.github.io/Final-Project/]
 
 **Pull Request:** [https://github.com/tsri-code/Final-Project/pull/1]
 
